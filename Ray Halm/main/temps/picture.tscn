@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bdghlma8e24il"]
+
+[node name="Picture" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 648.0
+offset_bottom = 384.0
+color = Color(1, 1, 0.905882, 1)
+
+[node name="sprite_source" type="Sprite2D" parent="."]
+position = Vector2(322, 179)
+scale = Vector2(0.32, 0.32)

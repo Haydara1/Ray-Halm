@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjy7itpf2122t"]
+
+[ext_resource type="Script" path="res://main/start.gd" id="1_n2b0u"]
+[ext_resource type="AudioStream" uid="uid://bjpljekqwl1et" path="res://assets/music/Ray's theme.wav" id="2_lt8l8"]
+[ext_resource type="PackedScene" uid="uid://bgy2u77w0ccqm" path="res://main/temps/button.tscn" id="3_7xkao"]
+
+[node name="start_menu" type="Node2D"]
+script = ExtResource("1_n2b0u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 102.0
+offset_bottom = 78.0
+scale = Vector2(18.8563, 14.0026)
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_lt8l8")
+autoplay = true
+
+[node name="StartButton" parent="." instance=ExtResource("3_7xkao")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 194.0
+offset_top = 586.0
+offset_right = 594.0
+offset_bottom = 671.0
+grow_horizontal = 1
+grow_vertical = 1
+text = "Start"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

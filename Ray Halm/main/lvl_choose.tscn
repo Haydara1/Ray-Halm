@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://im10y00o31xk"]
+
+[ext_resource type="Script" path="res://main/lvl_choose.gd" id="1_ifdqa"]
+[ext_resource type="PackedScene" uid="uid://bgy2u77w0ccqm" path="res://main/temps/button.tscn" id="1_rxer8"]
+
+[node name="lvl_choose" type="Node2D"]
+script = ExtResource("1_ifdqa")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_right = 1923.0
+offset_bottom = 1084.0
+color = Color(0, 0, 0, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(300, 200)
+offset_left = 108.0
+offset_top = 156.0
+offset_right = 148.0
+offset_bottom = 196.0
+scale = Vector2(5.59728, 4.35209)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="0" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_rxer8")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Chapter 0: The Beginning"
+alignment = 0
+
+[node name="1" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_rxer8")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Chapter 1: Persistence of time"
+alignment = 0
+
+[node name="2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_rxer8")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+disabled = true
+text = "Chapter 2: "
+alignment = 0
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/0" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/1" to="." method="_on_button_pressed" binds= [1]]

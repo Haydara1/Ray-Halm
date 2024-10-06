@@ -1,0 +1,186 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjx22w5emx1nc"]
+
+[ext_resource type="Script" path="res://main/temps/introduction_animation.gd" id="1_w82qy"]
+[ext_resource type="FontFile" uid="uid://bwqsyvjlismqh" path="res://assets/fonts/Salmon.ttf" id="2_12sb7"]
+[ext_resource type="Shader" path="res://main/temps/glitch.gdshader" id="3_2emh6"]
+[ext_resource type="AudioStream" uid="uid://c5fd2jabf5cek" path="res://assets/music/Glitchy tiny box.mp3" id="4_pqhkr"]
+
+[sub_resource type="Animation" id="Animation_x2jjw"]
+resource_name = "animation"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Introduction_animation/Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3.1, 6.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Introduction_animation/photo1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7, 10.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Introduction_animation/photo2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 11, 14),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Introduction_animation/photo3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 15, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Introduction_animation/glitchEffect:material:shader_parameter/shake_power")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(7, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.03, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Introduction_animation/glitchEffect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 7, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Introduction_animation/ColorRect:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(20, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Introduction_animation/AudioStreamPlayer:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Introduction_animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(20.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"add_office"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i18ay"]
+_data = {
+"animation": SubResource("Animation_x2jjw")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j2ik1"]
+shader = ExtResource("3_2emh6")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.433
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.01
+
+[node name="Introduction_animation" type="AnimationPlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_i18ay")
+}
+script = ExtResource("1_w82qy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -71.0
+offset_top = -67.0
+offset_right = -28.0
+offset_bottom = 1170.0
+scale = Vector2(47.8, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 702.0
+offset_top = 897.0
+offset_right = 979.0
+offset_bottom = 947.0
+scale = Vector2(2.03342, 2.6)
+theme_override_colors/font_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("2_12sb7")
+theme_override_font_sizes/font_size = 45
+
+[node name="photo1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(943, 519)
+scale = Vector2(0.607645, 0.573638)
+
+[node name="photo2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(941, 513)
+scale = Vector2(0.6, 0.6)
+
+[node name="photo3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(949, 525)
+
+[node name="glitchEffect" type="ColorRect" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 2
+material = SubResource("ShaderMaterial_j2ik1")
+offset_left = 239.0
+offset_top = 3.0
+offset_right = 2706.0
+offset_bottom = 1820.0
+scale = Vector2(0.6, 0.6)
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pqhkr")

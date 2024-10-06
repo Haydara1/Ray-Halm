@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0tua8a6t5cag"]
+
+[ext_resource type="Script" path="res://main/temps/reports_preview.gd" id="1_mevrw"]
+[ext_resource type="FontFile" uid="uid://bwqsyvjlismqh" path="res://assets/fonts/Salmon.ttf" id="3_3brcv"]
+[ext_resource type="Texture2D" uid="uid://deqq7drqeg60t" path="res://assets/krita/papers/Rprt_preview.png" id="3_n6yib"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtycu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e4ph"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6r12"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0kfk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rs87n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[node name="Reports_preview" type="Sprite2D"]
+z_index = 1
+material = SubResource("ShaderMaterial_vtycu")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_n6yib")
+script = ExtResource("1_mevrw")
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(18.0073, -224.769)
+scale = Vector2(1, 1.373)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -320.129
+offset_top = 327.979
+offset_right = 886.871
+offset_bottom = 566.979
+scale = Vector2(0.558687, 0.805873)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3brcv")
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = -414.0
+offset_top = -598.0
+offset_right = 446.0
+offset_bottom = 636.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3e4ph")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c6r12")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h0kfk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rs87n")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

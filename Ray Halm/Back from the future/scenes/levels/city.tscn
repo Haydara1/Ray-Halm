@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvdwqatt1vdgg"]
+
+[ext_resource type="Texture2D" uid="uid://dxmpxogo50b77" path="res://Back from the future/Assets/backgrounds/city 1/1.png" id="1_yav3g"]
+[ext_resource type="Texture2D" uid="uid://df7q4b4dwme3m" path="res://Back from the future/Assets/backgrounds/city 1/2.png" id="2_4ndao"]
+[ext_resource type="Texture2D" uid="uid://lb4jkqklnyvn" path="res://Back from the future/Assets/backgrounds/city 1/3.png" id="3_e6elv"]
+[ext_resource type="Texture2D" uid="uid://c181ev36ydauq" path="res://Back from the future/Assets/backgrounds/city 1/4.png" id="4_wnnn7"]
+[ext_resource type="PackedScene" uid="uid://5hp5w55iq0o4" path="res://Back from the future/scenes/Characters/you.tscn" id="5_w5v5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sifdh"]
+size = Vector2(1911, 113)
+
+[node name="city" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+scale = Vector2(3.34028, 3.39815)
+texture = ExtResource("1_yav3g")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+scale = Vector2(3.34028, 3.39815)
+texture = ExtResource("2_4ndao")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+scale = Vector2(3.34028, 3.39815)
+texture = ExtResource("3_e6elv")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+scale = Vector2(3.34028, 3.39815)
+texture = ExtResource("4_wnnn7")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 1141.5)
+shape = SubResource("RectangleShape2D_sifdh")
+
+[node name="Node2D" parent="." instance=ExtResource("5_w5v5e")]
+position = Vector2(132, 897)

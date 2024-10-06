@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://u5imbt6gnhec"]
+
+[ext_resource type="PackedScene" uid="uid://bjx22w5emx1nc" path="res://main/temps/introduction_animation.tscn" id="1_dgh6a"]
+[ext_resource type="Texture2D" uid="uid://c58t4rpuo74ly" path="res://assets/blender/scenes/chap1/pictures/KnifeView.png" id="2_vbs1k"]
+[ext_resource type="Texture2D" uid="uid://c235fbipg04an" path="res://assets/blender/scenes/chap1/pictures/Book.png" id="3_qj60a"]
+[ext_resource type="Texture2D" uid="uid://cwfmwy4231c3y" path="res://assets/blender/scenes/chap1/Salvador-Dali-Persistence-of-Memory.webp" id="4_eif38"]
+
+[node name="1" type="Node2D"]
+
+[node name="Introduction_animation" parent="." instance=ExtResource("1_dgh6a")]
+label_text = "January 16, 1990"
+picture1 = ExtResource("2_vbs1k")
+picture2 = ExtResource("3_qj60a")
+picture3 = ExtResource("4_eif38")

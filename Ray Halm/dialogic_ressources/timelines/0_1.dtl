@@ -1,0 +1,13 @@
+[signal arg="dialog_started"]
+[style name="Style"]
+Inidou: My work?! Work is going just fine, actually...[pause=3!] I shouldn't be telling you this, but I trust you,
+Inidou: last night I was called to search for this man, his family called and said he hasn't answered their calls for 24 hours, so first thing I did was inspect his appartement.
+Inidou: He works in a tech company as a cryptologist, so we have got his address from his boss, since his family doesn't know where he lives, which is weird.
+Inidou: The front door was locked but I have smelled a weird smell, so we had to break into his house,
+Inidou: complete darkness, and in the end of the hallway, we open the door, that should lead to a bedroom, and we find him dead, hanged from the ceiling.[pause=2!]
+Inidou: I will let you read the report to see if you can solve the mystery, but don't tell anyone that you have seen this please.
+[style name="Help_Style"]
+Press I to open your inventory.
+[signal arg="dialog_finished"]
+[wait time="3.0"]
+[end_timeline]

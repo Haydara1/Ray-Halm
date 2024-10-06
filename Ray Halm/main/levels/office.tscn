@@ -1,0 +1,156 @@
+[gd_scene load_steps=27 format=3 uid="uid://cw126bbcayq7n"]
+
+[ext_resource type="Script" path="res://main/levels/office.gd" id="1_jqayk"]
+[ext_resource type="Texture2D" uid="uid://bgactyy7usi8v" path="res://assets/blender/scenes/office.png" id="1_q0t0j"]
+[ext_resource type="Texture2D" uid="uid://dvwha4a574b7t" path="res://assets/blender/scenes/halm's office/phone_animation/0001.png" id="3_88jyk"]
+[ext_resource type="Texture2D" uid="uid://dvkem7yhnc7c" path="res://assets/blender/scenes/halm's office/phone_animation/0002.png" id="4_6mg8l"]
+[ext_resource type="Texture2D" uid="uid://dnmfyjlmxh8os" path="res://assets/blender/scenes/halm's office/phone_animation/0003.png" id="5_0bior"]
+[ext_resource type="Texture2D" uid="uid://c57st6nvyvuvv" path="res://assets/blender/scenes/halm's office/phone_animation/0004.png" id="6_tr6pj"]
+[ext_resource type="Texture2D" uid="uid://237d4pb56tgl" path="res://assets/blender/scenes/halm's office/phone_animation/0005.png" id="7_0u8o4"]
+[ext_resource type="Texture2D" uid="uid://b5r3xma5fbx5f" path="res://assets/blender/scenes/halm's office/phone_animation/0006.png" id="8_wvebb"]
+[ext_resource type="Texture2D" uid="uid://bnxfoayvtywm8" path="res://assets/blender/scenes/halm's office/phone_animation/0007.png" id="9_onq27"]
+[ext_resource type="Texture2D" uid="uid://b3fy4k077o8b4" path="res://assets/blender/scenes/halm's office/phone_animation/0008.png" id="10_u05ud"]
+[ext_resource type="Texture2D" uid="uid://cmw6gklvp4xav" path="res://assets/blender/scenes/halm's office/phone_animation/0009.png" id="11_vwh0h"]
+[ext_resource type="Texture2D" uid="uid://da1ki0hijonuw" path="res://assets/blender/scenes/halm's office/phone_animation/0010.png" id="12_345a1"]
+[ext_resource type="Texture2D" uid="uid://cnb1fwsgtwdjs" path="res://assets/blender/scenes/halm's office/phone_animation/0011.png" id="13_gncma"]
+[ext_resource type="Texture2D" uid="uid://bdyr7bqmhg2v" path="res://assets/blender/scenes/halm's office/phone_animation/0012.png" id="14_kn3ct"]
+[ext_resource type="Texture2D" uid="uid://da37ogwvdfci8" path="res://assets/blender/scenes/halm's office/phone_animation/0013.png" id="15_c01xy"]
+[ext_resource type="Texture2D" uid="uid://c80et75u7p0ig" path="res://assets/blender/scenes/halm's office/phone_animation/0014.png" id="16_kl45o"]
+[ext_resource type="Texture2D" uid="uid://dfv2wv2qif66p" path="res://assets/blender/scenes/halm's office/phone_animation/0015.png" id="17_bym2k"]
+[ext_resource type="Texture2D" uid="uid://d0fn0ahym587d" path="res://assets/blender/scenes/halm's office/phone_animation/0016.png" id="18_g85cg"]
+[ext_resource type="Texture2D" uid="uid://cd8ojsw2pbhs8" path="res://assets/blender/scenes/halm's office/phone_animation/0017.png" id="19_ugx50"]
+[ext_resource type="Texture2D" uid="uid://d051w4ke2e7ct" path="res://assets/blender/scenes/halm's office/phone_animation/0018.png" id="20_fy03k"]
+[ext_resource type="Texture2D" uid="uid://byc3d2a1mfoob" path="res://assets/blender/scenes/halm's office/phone_animation/0019.png" id="21_py6ju"]
+[ext_resource type="Texture2D" uid="uid://dyux5wqk0w3bd" path="res://assets/blender/scenes/halm's office/phone_animation/0020.png" id="22_f10al"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgjdx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_88jyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6mg8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0bior")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tr6pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0u8o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wvebb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_onq27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u05ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vwh0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_345a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gncma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kn3ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c01xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kl45o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bym2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g85cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ugx50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_fy03k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_py6ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_f10al")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="Animation" id="Animation_03hml"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(957, 529)]
+}
+
+[sub_resource type="Animation" id="Animation_b11is"]
+resource_name = "camera_movement"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(0.450625, 0.450625, 0.450625),
+"update": 0,
+"values": [Vector2(957, 552), Vector2(957, 529), Vector2(957, 552)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e3c03"]
+_data = {
+"RESET": SubResource("Animation_03hml"),
+"camera_movement": SubResource("Animation_b11is")
+}
+
+[node name="office" type="Node2D"]
+use_parent_material = true
+script = ExtResource("1_jqayk")
+
+[node name="sprites" type="Node2D" parent="."]
+position = Vector2(-38, -34)
+scale = Vector2(2.1, 2.1)
+
+[node name="background" type="Sprite2D" parent="sprites"]
+use_parent_material = true
+texture = ExtResource("1_q0t0j")
+centered = false
+
+[node name="Phone_handle" type="AnimatedSprite2D" parent="sprites"]
+sprite_frames = SubResource("SpriteFrames_fgjdx")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(957, 529)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e3c03")
+}

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgy2u77w0ccqm"]
+
+[ext_resource type="FontFile" uid="uid://b5d8ncq8it46a" path="res://assets/fonts/Montserrat-Black.ttf" id="1_m2cjt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcw5v"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drchk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Button" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1536.0
+offset_bottom = -1015.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.795295, 0.0440019, 0.0245211, 1)
+theme_override_colors/font_hover_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.333333, 0.333333, 0.333333, 1)
+theme_override_fonts/font = ExtResource("1_m2cjt")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_xcw5v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_drchk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_drchk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_drchk")
+theme_override_styles/focus = SubResource("StyleBoxFlat_drchk")

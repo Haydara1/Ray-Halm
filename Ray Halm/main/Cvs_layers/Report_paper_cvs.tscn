@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfcfke3tsj7j5"]
+
+[ext_resource type="PackedScene" uid="uid://c7j6g4ffteuye" path="res://main/Cvs_layers/report_paper.tscn" id="1_bc8nm"]
+[ext_resource type="Script" path="res://main/Cvs_layers/report_paper.gd" id="2_tavrv"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("2_tavrv")
+
+[node name="Report_paper" parent="." instance=ExtResource("1_bc8nm")]
+
+[node name="Text" parent="Report_paper" index="0"]
+offset_right = 632.0
+offset_bottom = 827.0
+
+[editable path="Report_paper"]
